@@ -178,7 +178,7 @@ def scrape_site(df, url='loc', verbose=False):
                     'paragraphs': _get_paragraphs(r),
                 }
 
-                df_pages = df_pages.append(row, ignore_index=True)
+                df_pages.loc[len(df_pages)] = row
 
     return df_pages
 
