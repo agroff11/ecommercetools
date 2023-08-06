@@ -117,7 +117,8 @@ def _sitemap_to_dataframe(xml: str, name=None, verbose=False):
         if verbose:
             print(row)
 
-        df = pd.concat([row, df], ignore_index=True)
+        df = df.loc[len(df)] = row
+
     return df
 
 
