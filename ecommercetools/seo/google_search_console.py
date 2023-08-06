@@ -104,6 +104,7 @@ def query_google_search_console(key: str, site_url: str, payload: dict, fetch_al
 
     if fetch_all == False:
         results = _get_results(service, site_url, payload, results)
+        print(results)
     else:
         maxrows = 10000
         startrow = 0
@@ -113,6 +114,7 @@ def query_google_search_console(key: str, site_url: str, payload: dict, fetch_al
             payload['rowLimit'] = maxrows
             payload['startRow'] = startrow
             result = _get_results(service, site_url, payload, results)
+            print(results)
 
             if result is None:
                 complete = True
