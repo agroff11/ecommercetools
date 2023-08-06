@@ -47,7 +47,7 @@ def _get_response(service, site_url, payload):
     try:
         return service.searchanalytics().query(siteUrl=site_url, body=payload).execute()
     except Exception as e:
-        print("response error:"+srt(e))
+        print("response error:"+str(e))
         return e
 
 
@@ -84,7 +84,7 @@ def _get_results(service, site_url, payload, results):
 
         return results
     except Exception as e:
-        print("results error:"+srt(e))
+        print("results error:"+str(e))
         return None
 
 
